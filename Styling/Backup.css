@@ -1,0 +1,1589 @@
+/* ======================================= Variables */
+/* ============ Colors */
+:root {
+  --main-color: 66, 96, 111;
+}
+
+/* ============================================= CSS */
+@font-face {
+  font-family: 'Impact';
+  src: url("/Mosala/Styling/Fonts/Impact.ttf");
+}
+
+/*Hvilket filformat er best??*/
+@font-face {
+  font-family: 'Roboto';
+  src: url("/Mosala/Styling/roboto-regular-webfont.woff2");
+}
+
+@font-face {
+  font-family: 'Icon';
+  src: url("/Mosala/Styling/FontAwesome-webfont.woff");
+}
+
+html {
+  scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -webkit-locale: "nb" !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  transition: all 1s ease;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Roboto', sans-serif;
+  min-width: 320px !important;
+  line-height: 1.25;
+  overflow-y: auto;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100% !important;
+  overflow-x: hidden !important;
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+  display: block;
+  height: 80px;
+  vertical-align: middle;
+  color: #777;
+  background-color: rgb(var(--main-color));
+  z-index: 2;
+}
+
+.Body {
+  margin: auto;
+  width: 70%;
+}
+
+::-moz-selection {
+  background: rgb(var(--main-color));
+  opacity: 0.7;
+  color: white;
+}
+
+::selection {
+  background: rgb(var(--main-color));
+  color: white;
+  opacity: 0.7;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  margin: 2px 2px 2px -7px;
+  right: 0;
+  border-radius: 2.5px;
+}
+
+::-webkit-scrollbar-thumb {
+  transition: all 0.3s ease-in-out;
+  background: #999;
+  border-radius: 2.5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transition: all 0.3s ease-in-out;
+  background: #666;
+}
+
+nav {
+  box-sizing: border-box;
+  background-color: white;
+  border-bottom: 2px solid rgb(var(--main-color));
+  vertical-align: middle;
+  /*
+  padding: 0 calc(15% - (100% / 80)) 0 calc(15% - (100% / 80) + 2px);
+  */
+  margin-bottom: 5vh;
+  display: block;
+  height: 70px;
+  width: 100%;
+  /*
+  width: calc(100% - ((15% - (100% / 80)) * 2));
+  */
+}
+
+iframe {
+  border: 0px solid #777;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+footer table {
+  width: 70%;
+  margin: auto;
+  border-collapse: collapse;
+  height: 80px;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+footer td {
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 35px;
+  width: calc(100% / 3);
+  color: #DDD;
+  padding-top: calc(45px - 3em);
+}
+
+footer a {
+  transition: all .1s ease;
+  color: #DDD;
+  text-decoration: none;
+}
+
+footer a:hover {
+  transition: all .1s ease;
+  color: white;
+  text-decoration: underline;
+}
+
+#LeftFooter {
+  text-align: left;
+}
+
+#MiddleFooter {
+  text-align: center;
+  color: white;
+}
+
+#RightFooter {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.Main-pic {
+  filter: blur(10px) !important;
+  height: calc(100vh + 20px);
+  width: calc(100vw + 20px);
+  vertical-align: bottom;
+  position: absolute;
+  object-fit: cover;
+  margin: -10px;
+  display: flex;
+  opacity: 0.9;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  clip: rect(10px, calc(100vw + 10px), 500vh, 10px) !important;
+}
+
+.Logo {
+  font-family: 'Impact', 'Haettenschweiler', 'Franklin Gothic Bold', 'Charcoal', 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', sans-serif;
+  margin-left: calc(100% / 80);
+  text-transform: uppercase;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 30px;
+  margin-top: 5px;
+  height: 60px;
+}
+
+.Logo a div {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 2px;
+  vertical-align: top;
+  margin-top: 11px;
+  color: #777;
+}
+
+.Logo a img {
+  margin-left: 3px;
+  width: 60px;
+  clear: left;
+}
+
+.NavButtons {
+  display: inline-block;
+  float: right;
+}
+
+.NavButtons a {
+  /*
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  */
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: inherit, sans-serif;
+  /*
+  margin-right: calc(100vw / 80);
+  */
+  color: rgb(var(--main-color));
+  transition: all .1s ease;
+  text-transform: normal;
+  border: 0px solid #777;
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0 1vw;
+  text-align: center;
+  min-width: 10vw;
+  float: right;
+  /* 70px 5px 5px 5px */
+  height: 68px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  /**/
+  text-transform: Normal;
+  font-size: 28px;
+  font-weight: 500;
+  padding-top: 17px;
+  box-sizing: border-box;
+}
+
+.NavButtons a:hover {
+  background-color: rgba(220, 220, 220, 0.3);
+  transition: all .1s ease;
+}
+
+.Dropdown {
+  margin-right: 1vw;
+  margin-top: 0px;
+  display: none;
+  float: right;
+}
+
+.DropdownButton {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all .1s ease;
+  border: 0px solid #777;
+  box-sizing: border-box;
+  text-decoration: none;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 3px 4px 0px;
+  display: inherit;
+  min-width: 60px;
+  float: right;
+  height: 60px;
+  text-align: center;
+}
+
+.DropdownButton img {
+  width: 45px;
+  margin-top: 5.5px;
+}
+
+.NavActive {
+  background-color: rgba(200, 200, 200, 0.4) !important;
+  color: rgb(var(--main-color)) !important;
+  text-decoration: underline !important;
+}
+
+.Button {
+  background-color: rgba(var(--main-color), 0.9);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  font-family: inherit, sans-serif;
+  padding: 16px 1.5vw 15px;
+  transition: all .1s ease;
+  border: 0px solid #777;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 10px;
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+  min-width: 10vw;
+  font-size: 38px;
+  height: 90px;
+  color: white;
+}
+
+.Button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(var(--main-color));
+  color: rgb(var(--main-color));
+  transition: all .1s ease;
+}
+
+.Button:active {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(var(--main-color));
+  color: rgb(var(--main-color));
+  transition: all .1s ease;
+}
+
+#CTA-buttons {
+  margin-top: calc(50vh - 100px) !important;
+  padding-top: calc(1.5vh + 2px);
+  transition: all .3s ease;
+  vertical-align: middle;
+  padding-bottom: -1.5vh;
+  text-align: center;
+  min-width: 300px;
+  font-weight: 500;
+  height: 80px;
+  width: 100%;
+}
+
+#Leftbtn {
+  transition: all .3s ease;
+  margin-right: 2vw;
+}
+
+#Rightbtn {
+  transition: all .3s ease;
+  margin-left: 2vw;
+}
+
+h1 {
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
+  background-color: rgb(var(--main-color));
+  text-shadow: 0px 1px 1px #777;
+  width: calc(100% - 4vw);
+  font-family: sans-serif;
+  text-align: left;
+  padding: 1vh 2vw;
+  display: block;
+  color: white;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 0 0 1vh 0;
+}
+
+h1 table {
+  width: 100%;
+}
+
+h1 td {
+  float: right;
+  right: 0;
+  margin-right: .5vw;
+  text-align: right;
+  display: inline-block;
+}
+
+h1 td a {
+  color: white;
+  text-decoration: none;
+}
+
+#GreySide {
+  background-color: rgb(226, 226, 226);
+  padding: 1vw;
+  height: calc(88vh - 110px - 2vw);
+  left: 0;
+  top: 0;
+  clear: right;
+  overflow-y: scroll;
+  overflow-x: auto;
+  width: auto !important;
+  /* 25% */
+  display: inline-block;
+  text-align: center;
+  position: static;
+  /*
+  resize: horizontal;
+  max-width: 70%;
+  */
+  min-width: 22%;
+}
+
+/*
+#handle {
+  width: 80px;
+  height: 30px;
+  margin-top: calc((88vh - 120px - 2vw) / 2 - 15);
+  right: 0;
+  top: 0;
+  background-color: gray;
+  cursor: e-resize;
+}
+*/
+#GreySide .pfp {
+  border-radius: 50%;
+  width: 65%;
+  border: 2px solid #777;
+}
+
+#GreySide span {
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  color: black;
+  font-size: 25px;
+  border-bottom: 1px solid #777;
+  padding: 0px 2px;
+  padding-top: 1vh;
+  display: block;
+  word-wrap: break-word;
+}
+
+#GreySide span a {
+  color: black;
+  text-decoration: none;
+}
+
+#Fn {
+  font-size: 35px !important;
+  text-align: center !important;
+  word-wrap: normal;
+}
+
+#Sn {
+  font-size: 30px !important;
+  text-align: center !important;
+  word-wrap: normal;
+}
+
+#Edit {
+  text-decoration: none;
+  left: 30vw;
+  top: calc(140px + 6vh);
+  position: absolute;
+}
+
+#Edit img {
+  width: 18px !important;
+  height: 18px !important;
+  margin-right: 10px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+#Skjul {
+  Font-size: 20px;
+  color: #777;
+  text-decoration: none;
+  left: 16vw;
+  top: calc(140px + 6vh);
+  text-align: left !important;
+  float: left;
+  position: absolute;
+}
+
+#DLicon {
+  width: 15px !important;
+  height: 22px !important;
+  margin-right: 10px;
+  object-fit: cover;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#UtdanningDiv {
+  width: auto;
+  /*calc(75% - 6vw) !important;*/
+  overflow-y: scroll !important;
+  padding: 2vw;
+  height: calc(88vh - 110px - 4vw);
+  right: 0;
+  font-size: 1em;
+  top: 0;
+  float: right;
+  clear: left;
+  overflow-x: hidden;
+  display: inline-block;
+  text-align: justify;
+  position: static;
+}
+
+#IndexFooter {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: -80px;
+}
+
+#SøkListe ul {
+  list-style-type: none;
+  margin-block-start: 0;
+}
+
+#SøkListe li {
+  transition: all .3s ease;
+  border-radius: 1em;
+  width: calc(94% + 40px);
+  margin-left: -40px;
+  vertical-align: top;
+  border: 1px solid #777;
+  margin-bottom: 2vh;
+  padding: 10px 3%;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+#SøkListe li:hover {
+  transition: all .3s ease;
+  transform: scale(1.02);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  border: 2.5px solid rgb(150, 150, 255);
+}
+
+#SøkListe a {
+  color: #555;
+  text-decoration: none;
+}
+
+#SøkListe h2 {
+  text-decoration: underline;
+  text-decoration-color: #777;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0;
+  display: inline-block;
+  color: black;
+}
+
+.TopSLine {
+  margin-bottom: 1vh;
+  display: block;
+}
+
+.PersonHits {
+  color: grey;
+  float: right;
+  text-align: right;
+  font-size: .7em;
+}
+
+.PersonHits::after {
+  content: " Søkere";
+  vertical-align: sub;
+}
+
+.BedriftHits {
+  margin-left: 1%;
+  color: grey;
+  float: right;
+  text-align: right;
+  font-size: .7em;
+}
+
+.BedriftHits::after {
+  content: " Bedrifter";
+  vertical-align: sub;
+}
+
+.ReadMore {
+  text-decoration: underline;
+  color: inherit;
+  float: right;
+  text-align: right;
+  font-weight: bold;
+}
+
+.ReadMore:hover {
+  color: var(--main-color);
+}
+
+.JobDesc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 100px);
+  display: inline-block;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: normal;
+}
+
+.JobDesc::after {
+  content: ".  .  ."
+    color: #EEE;
+}
+
+#Search {
+  border-radius: 8px;
+  transition: all .2s ease;
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  text-align: left;
+  display: inline-block;
+  background-color: rgb(230, 230, 230);
+  padding: 12px 18px 12px 52px;
+  margin: 8px auto;
+  width: 100%;
+  font-size: 1.2em;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  /* Icon */
+  background-image: url(../Images/search.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 30px 30px;
+  background-position: 15px 50%;
+  cursor: pointer;
+}
+
+#Search:focus {
+  transition: all .2s ease;
+  border-radius: 25px;
+  outline: none;
+}
+
+/* ===================================== Dropdown meny */
+.MiniNavButtons {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+  background-color: #444;
+  margin-right: calc(1vw + 0px);
+  border-radius: 10px;
+  position: absolute;
+  min-width: 100px;
+  margin-top: 80px;
+  z-index: 999999;
+  display: none;
+  float: right;
+  right: 0;
+}
+
+.MNavActive {
+  text-decoration: underline !important;
+  font-weight: 400 !important;
+}
+
+.MiniNavButtons a {
+  font-family: inherit, sans-serif;
+  text-decoration: none;
+  font-weight: 200;
+  border-radius: 10px;
+  text-align: right;
+  z-index: 999999;
+  font-size: 25px;
+  display: block;
+  padding: 10px;
+  color: white;
+  background-color: inherit
+}
+
+.MiniNavButtons a:hover {
+  background-color: rgba(50, 50, 50, 0.4);
+  transition: all .1s ease;
+}
+
+.Dropdown:hover .MiniNavButtons {
+  transition: 0.2s all ease-in-out;
+  display: block !important;
+  z-index: 99999999;
+}
+
+.Dropdown:focus .MiniNavButtons {
+  transition: 0.2s all ease-in-out;
+  display: block !important;
+  z-index: 99999999;
+}
+
+/* ===================================== Registrer side */
+.register {
+  text-align: left;
+  float: left;
+  display: inline;
+  max-width: 800px;
+  width: 100%;
+}
+
+.register p {
+  font-size: 1.6em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#Personalia {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0px solid #777;
+}
+
+#Personalia td {
+  width: calc(49%);
+  float: left;
+  display: inline-block;
+}
+
+.register #Registrer {
+  padding: 18px 18px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+input:invalid, select:invalid, textarea:invalid, button:invalid {
+  border-bottom-color: red;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+.select::after {
+  transition: all .2s ease;
+  content: "\25BC";
+  padding: 0 1em;
+  background: #ddd;
+  color: white;
+  height: 49px;
+  width: 50px;
+  overflow: hidden;
+  box-sizing: border-box;
+  top: 29px;
+  bottom: 0;
+  right: 0;
+  margin-right: calc(((100% - (10vw + 2vmax)) / 100 * 51) - 1px);
+  pointer-events: none;
+  /*
+  margin-left: calc(100% / 100 * 49 - 49px);
+  */
+  padding-top: 15px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.select:hover::after {
+  transition: all .3s ease;
+  color: rgb(var(--main-color));
+}
+
+.select select {
+  position: relative;
+}
+
+select option {
+  background-color: white;
+  margin: 12px 18px;
+}
+
+.register input, .register select, .register textarea {
+  transition: all .2s ease;
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  text-align: left;
+  display: inline-block;
+  background-color: rgb(230, 230, 230);
+  padding: 12px 18px;
+  margin: 8px auto;
+  width: 100%;
+  max-width: 700px;
+  font-size: 1.2em;
+}
+
+.register input[type="checkbox"] {
+  border: 0px solid #ccc;
+  box-sizing: border-box;
+  text-align: left;
+  display: run-in;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  font-size: .5em;
+}
+
+#BigTextArea {
+  height: 5em;
+  vertical-align: top;
+  box-sizing: border-box;
+  text-align: left;
+  display: block;
+  resize: vertical;
+  max-height: 12em;
+  min-height: 53px;
+  font-family: inherit;
+}
+
+.register input:focus, .register select:focus, .register textarea {
+  border-radius: 15px;
+  transition: all .2s ease;
+}
+
+#HvordanTitle {
+  float: left;
+  text-align: left;
+}
+
+/* ===================================== Logg inn Form */
+#LoginHeader {
+  display: none;
+  font-family: 'Impact', sans-serif;
+  font-size: 17vw;
+  letter-spacing: 2px;
+  margin-bottom: 1vh;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #777;
+}
+
+#Registrer {
+  transition: all .2s ease;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  background-color: rgb(var(--main-color));
+  color: white !important;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 0px solid #777;
+  padding: 12px 20px;
+  margin-bottom: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 700px;
+  margin-top: 8px;
+  width: 100%;
+  height: 58px;
+}
+
+#Registrer:hover {
+  transition: all .2s ease;
+  font-size: 1.3em;
+  opacity: 0.8;
+}
+
+.FormWidth {
+  margin: auto;
+  max-width: 800px;
+  width: 100%;
+  height: 100vh;
+}
+
+.modal input[type=text], .modal input[type=password], .modal input[type=email] {
+  border: 0px;
+  border-bottom: 2px solid #777;
+  background-color: rgba(230, 230, 230, 0.4);
+  border-radius: 15px 15px 0px 0px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 15px 18px 12px;
+  margin-bottom: 18px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 9px;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+button {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  background-color: rgb(54, 111, 140);
+  cursor: pointer;
+  margin: 8px auto 0px;
+  color: white;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  font-size: 1.3em;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.modalcontainer {
+  border-left: 1px solid #777;
+  border: 0px solid #777;
+}
+
+#forgot a {
+  float: right;
+  color: #777;
+  text-decoration: underline;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 0px;
+  overflow: hidden;
+  position: fixed;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999999999;
+  left: 0;
+  top: 0;
+}
+
+.modal label {
+  font-size: 1.3em;
+}
+
+#remember {
+  width: calc(100% - 8px);
+  display: block;
+  color: #777;
+  font-size: 1.1em;
+  margin-bottom: 13px;
+  padding: 0px 3px 0px 5px;
+}
+
+.modal-content {
+  width: 100%;
+}
+
+.MainLogin {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  background-color: #fefefe;
+  width: calc(58% - 76px);
+  padding: 8px 38px 28px;
+  float: right;
+  display: inline-block;
+  margin-top: calc((100vh - 357px) / 2)
+}
+
+.SubLogin {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  float: left;
+  background-color: rgba(60, 60, 60, 0.8);
+  color: white;
+  padding: 38px 38px;
+  width: calc(42% - 76px);
+  display: inline-block;
+  margin-top: calc((100vh - 277px) / 2);
+}
+
+.SubLogin p {
+  font-size: 1.1em;
+  margin-bottom: 50px;
+}
+
+button[name=Register] {
+  background-color: rgba(54, 111, 140, 0.5);
+  border: 1px solid white !important;
+  padding: 11px 20px;
+}
+
+.close {
+  font-weight: bold;
+  font-size: 35px;
+  color: #777;
+  right: 38px;
+  float: right;
+  clear: left;
+}
+
+.close:hover, .close:focus {
+  cursor: pointer;
+  color: red;
+}
+
+.modal input[type=checkbox] {
+  width: 1.5em;
+  height: 1.5em;
+  color: rgb(66, 96, 111);
+  border: 1px solid #777;
+  background-color: #EEE;
+  font-size: .6em;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.InFrame {
+  display: block;
+  margin-left: calc(50% - (5vw - 25px));
+  transform: translate(-50%, 0%);
+  width: calc(10vw + 2vmax + 800px);
+  overflow-x: hidden;
+}
+
+.Steps {
+  float: left;
+  display: inline-flex;
+  flex-direction: column;
+  width: 10vw;
+  padding: 0 2vmax 0 0;
+  position: sticky;
+  top: 0;
+}
+
+.Steps div {
+  width: 0px;
+  height: 330px;
+  top: 56px;
+  left: 5vw;
+  border-top: 0px dashed #777;
+  border-left: 2px dashed #777;
+  position: absolute;
+  z-index: 1;
+}
+
+/*(10vw + 2vmax + 700) / 2*/
+.Steps span {
+  border: 3px solid white;
+  border-radius: 100%;
+  background-color: rgb(230, 230, 230);
+  color: #777;
+  margin: 30px auto;
+  font-size: 30px;
+  padding: 4px 10px 5px 13px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  box-sizing: border-box;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.StepFinished {
+  background-color: rgb(245, 245, 245) !important;
+  text-decoration: line-through !important;
+  color: #DDD !important;
+}
+
+#ActiveStep {
+  background-color: rgb(var(--main-color)) !important;
+  color: white !important;
+}
+
+.Tilbake {
+  transition: all .2s ease;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  background-color: #EEE;
+  color: rgb(var(--main-color)) !important;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 0px solid rgb(var(--main-color));
+  max-width: 700px;
+  padding: 18px 18px;
+  font-size: 1.2em;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 100%;
+  height: 57px;
+}
+
+.Tilbake:hover {
+  transition: all .2s ease;
+  font-size: 1.3em;
+  border: 2px solid rgb(var(--main-color));
+  padding: 16px 16px;
+}
+
+/* ============================================= Big boys */
+#Hvordan {
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.3);
+  width: calc(100% - 4vmax);
+  height: calc(88vh - 110px - 4vmax);
+  background-color: #FFF;
+  margin-bottom: 5vh;
+  font-size: 1.3em;
+  padding: 2vmax;
+  color: #000;
+  overflow-y: scroll;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+#Vertification {
+  width: 48%;
+  margin: 10% 24% 0% 28%;
+  text-align: left;
+  min-width: 300px;
+  max-width: 700px;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+}
+
+2e #Vertification::before {
+  content: url(../Images/check.png);
+  width: 50px;
+  top: 25px;
+  left: 0;
+  display: inline-block;
+  transform: translateX(-100%);
+  position: absolute;
+}
+
+.BigContent:after {
+  content: "";
+  -webkit-box-shadow: inset 0px -80px 94px -58px rgba(255, 255, 255, 1);
+  -moz-box-shadow: inset 0px -80px 94px -58px rgba(255, 255, 255, 1);
+  box-shadow: inset 0px -80px 94px -58px rgba(255, 255, 255, 1);
+  position: absolute;
+  bottom: 5vh;
+  left: 15%;
+  width: 70%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.RegisterOp {
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: .8vw;
+  padding: 0 3px;
+}
+
+#RegisterOpAc {
+  font-size: 0.8em;
+  color: white;
+  border-top: 5px solid rgba(255, 255, 255, 0.8);
+  padding-top: 13.5px;
+}
+
+#RegistreringsSider {
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.3);
+  width: calc(100% - 4vmax);
+  background-color: #fff;
+  margin-bottom: 5vh;
+  font-size: 1.3em;
+  padding: 2vmax;
+  color: #000;
+  overflow: hidden;
+  z-index: 1;
+  height: calc(88vh - 115px - 4vmax);
+}
+
+#Hvordan h2 {
+  margin-block-start: 1.2em;
+}
+
+#SøkListe {
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.3);
+  width: calc(100% - 4vmax);
+  height: calc(88vh - 162px - 6vmax);
+  /* Endre denne hvis du endrer noe høydevis på Stillinger siden*/
+  background-color: #fff;
+  margin-bottom: 5vh;
+  font-size: 1.3em;
+  padding: .3vmax 2vmax 2vmax 2vmax;
+  color: #000;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+#SøkBG {
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.3);
+  width: calc(100% - 4vmax);
+  background-color: #fff;
+  font-size: 1.3em;
+  padding: 2vmax 2vmax 1.7vmax 2vmax;
+  /*border-bottom: 1px solid #AAA;*/
+  color: #000;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+#Profildiv {
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.3);
+  width: calc(100%);
+  background-color: #fff;
+  font-size: 1.3em;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  color: #000;
+  overflow: hidden;
+  /*
+  height: calc(88vh - 120px - 0vw);
+  */
+  margin-bottom: 5vh;
+}
+
+/* =============================== Mobile optimization */
+@media screen and (max-width: 1222px) {
+  #Edit {
+    left: 36vw;
+  }
+
+  #Skjul {
+    left: 12vw;
+  }
+
+  .Body {
+    width: 80%;
+  }
+
+  .BigContent:after {
+    left: 10%;
+    width: 80%;
+  }
+
+  #GreySide {
+    width: 35% !important;
+  }
+
+  #UtdanningDiv {
+    width: calc(65% - 6vw) !important;
+  }
+
+  .register {
+    max-width: 650px;
+  }
+
+  .InFrame {
+    width: calc(10vw + 2vmax + 650px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #Edit {
+    left: 45vw;
+  }
+
+  #Skjul {
+    left: 12vw;
+  }
+
+  footer table {
+    width: 80%;
+  }
+
+  #GreySide {
+    width: calc(50% - 2vw) !important;
+  }
+
+  #UtdanningDiv {
+    width: calc(50% - 4vw) !important;
+  }
+
+  .NavButtons {
+    display: none;
+  }
+
+  .Dropdown {
+    display: inline-block;
+  }
+
+  .Logo {
+    margin-left: 1vw;
+  }
+
+  #Leftbtn {
+    margin-bottom: 2vh !important;
+    margin-top: -5vh !important;
+    max-width: 560px;
+    display: block;
+    margin: auto;
+  }
+
+  #Rightbtn {
+    margin-top: 2vh !important;
+    max-width: 560px;
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .select::after {
+    margin-right: -1px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .select::after {
+    top: calc((0px - 1vh) + 7vh + 69px + (5vh - 25px));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #Edit {
+    left: 82vw;
+    font-size: 100%;
+  }
+
+  #Skjul {
+    left: 14vw;
+    font-size: 180%;
+  }
+
+  #GreySide {
+    display: inline-flex;
+    padding: 1vw 4vw;
+    border-bottom: 2px solid #777;
+    width: calc(100% - 8vw) !important;
+    font-size: 200%;
+  }
+
+  #Edit {
+    margin-right: 5vw;
+  }
+
+  #GreySide img {
+    width: 50%;
+    margin-top: 3vh;
+  }
+
+  #GreySide span {
+    font-size: 90%;
+  }
+
+  #Fn {
+    font-size: 105% !important;
+  }
+
+  #Sn {
+    font-size: 105% !important;
+  }
+
+  #UtdanningDiv {
+    padding: 1vw 4vw;
+    display: inline-flex;
+    width: calc(100% - 8vw) !important;
+    flex-direction: column;
+  }
+
+  #Profildiv {
+    flex-direction: column;
+  }
+
+  #LeftFooter {
+    margin-top: 20px;
+    text-align: center !important;
+  }
+
+  #MiddleFooter {
+    text-align: center !important;
+    margin-top: 10px;
+  }
+
+  #RightFooter {
+    text-align: center !important;
+    margin-top: 10px;
+  }
+
+  .register {
+    max-width: 400px;
+  }
+
+  .InFrame {
+    width: calc(10vw + 2vmax + 400px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #Personalia td {
+    display: block;
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 80%;
+    margin: 50vh auto 0;
+    transform: translate(0%, -50%);
+  }
+
+  .MainLogin {
+    width: calc(100% - 76px);
+    float: none;
+    display: block;
+    margin: 0;
+    margin-top: 10%;
+  }
+
+  #LoginHeader {
+    display: block;
+  }
+
+  .SubLogin {
+    width: calc(100% - 76px);
+    float: none;
+    display: block;
+    margin: 0;
+    background-color: rgba(80, 80, 80, 1);
+  }
+
+  .SubLogin h3 {
+    text-align: center;
+    width: 100%;
+    font-weight: normal;
+    margin-top: -20px;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+  }
+
+  .SubLogin p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h1 td {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  #RegisterOpAc {
+    padding-top: 1px;
+  }
+
+  #HvordanTitle {
+    margin-bottom: 10px;
+  }
+
+  #RegistreringsSider {
+    padding: 2vmax;
+    height: calc(88vh - 163px - 4vmax);
+  }
+
+  .register {
+    max-width: 700px;
+  }
+
+  .InFrame {
+    width: 100%;
+    margin-left: 0;
+    transform: translate(0);
+    max-width: 700px;
+  }
+
+  .Steps {
+    flex-direction: row;
+    width: 100%;
+    vertical-align: middle;
+    align-items: center;
+    margin-bottom: 2vh;
+    margin-top: calc(15px - 1vh);
+  }
+
+  .Steps span {
+    margin: calc(5vh - 25px) calc((100% - 200px) / 8);
+  }
+
+  .Steps div {
+    height: 0px;
+    width: calc(100% / 8 * 6);
+    left: calc((100% - 200px) / 8 + 1px);
+    border-top: 2px dashed #777;
+    border-left: 0px dashed #777;
+    top: 5vh;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #IndexFooter {
+    margin-bottom: -120px;
+  }
+
+  footer td {
+    width: 100%;
+    display: block;
+    text-align: center !important;
+  }
+
+  footer {
+    height: 120px;
+  }
+
+  footer table {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    margin-top: 8vh;
+  }
+
+  #Edit {
+    left: 86.5vw;
+    top: calc(140px + 4vh);
+    font-size: 100%;
+  }
+
+  #Skjul {
+    left: 7vw;
+    top: calc(140px + 4vh);
+    font-size: 180%;
+  }
+
+  .Body {
+    width: 95%
+  }
+
+  .BigContent:after {
+    left: 2.5%;
+    width: 95%;
+    bottom: 8vh;
+  }
+
+  nav {
+    margin-bottom: 2vh;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .modal-content {
+    background-color: rgb(80, 80, 80);
+    transform: translate(0%, 0%);
+    width: calc(100vw + 5px) !important;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .modal {
+    overflow-y: auto;
+  }
+
+  .MainLogin {
+    padding-top: 5vh;
+    margin: 0;
+  }
+
+  .SubLogin {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+
+  #LoginHeader {
+    font-size: 20vw;
+  }
+
+  footer table {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .Button {
+    padding: 20px 1.5vw 20px;
+    min-width: 200px;
+    font-size: 30px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 362px) {
+  h1 td {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 334px) {
+  h1 td {
+    font-size: 0.8em;
+  }
+}
