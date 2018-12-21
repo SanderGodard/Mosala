@@ -1,8 +1,8 @@
 # Mosala
 Git oppsett den 21.12.18
-Har allerede gjort det meste som trengs i prosjektet, tenkte jeg skulle bruke det for å bli mer kjent med GitHub.
+Har allerede gjort det meste som trengs i prosjektet frontend wise, tenkte jeg skulle bruke det for å bli mer kjent med GitHub.
 
 Ikke noe spesielt å se her egentlig.
 
 
-<a href="index.php">Gå til nettside</a>
+<a href="http://klasserom.net/204/Elev20416/Eget%20arbeid/Mosala/">Gå til nettside</a>
