@@ -1,0 +1,145 @@
+<!Doctype html>
+<html lang="nb-NO">
+
+<head>
+	<title>Mosala</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta name="keywords" content="Mosala, jobb, stilling, finne jobb, ansette, startup">
+	<meta name="author" content="Josué, Anders, Sander">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#42606F">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#42606F">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#42606F">
+	<link rel="shortcut icon" href="/Mosala/Images/favicon.ico">
+	<link rel="stylesheet" href="/Mosala/Styling/Styling.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:200,400,400i,500,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script>
+		if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+	<script>
+		window.console = window.console || function(t) {};
+  </script>
+	<script>
+		// We listen to the resize event
+  window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
+
+  //Fixes the vh measurement for mobile
+
+  </script>
+	<!-- Google analytics script må legges inn -->
+</head>
+<nav>
+	<div class="Logo">
+		<a href="/Mosala/">
+			<div>Mosala</div><img src="/Mosala/Images/MinimalLogo.png" alt="Logo">
+		</a>
+	</div>
+	<div class="NavButtons">
+		<a onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;">
+			Logg inn </a>
+		<a href="/Mosala/Pages/About-us.php">Om oss</a>
+		<a href="/Mosala/Pages/How-it-works.php">Hvordan det virker</a>
+		<a href="/Mosala/Pages/Stillinger.php">Stillinger</a>
+	</div>
+	<div class="Dropdown">
+		<a class="DropdownButton" href="javascript:void(0)"><img alt="Menu" src="/Mosala/Images/menu.png"></a>
+		<div class="MiniNavButtons">
+			<a href="/Mosala/Pages/Stillinger.php">Stillinger</a>
+			<a href="/Mosala/Pages/How-it-works.php">Hvordan det virker</a>
+			<a href="/Mosala/Pages/About-us.php">Om oss</a>
+			<a onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;">
+				Logg inn </a>
+		</div>
+	</div>
+</nav>
+
+<body>
+	<!-- Background -->
+	<div>
+		<img class="Main-pic" src="Images/BG.jpg" alt="Background image">
+	</div>
+	<!-- Login -->
+	<div id="id01" class="modal">
+		<div class="FormWidth">
+
+
+			<form class="modal-content animate" enctype="multipart/form-data" action="/Mosala/Pages/Profile.php" method="post">
+				<div class="MainLogin">
+					<div class="modalcontainer">
+						<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Lukk">&times;</span><br>
+						<span id="LoginHeader">Mosala</span>
+						<label for="email"><b>E-post *</b></label><br>
+						<input autofocus type="email" name="e-mail" autocomplete="email" required><br>
+
+						<label for="psw"><b>Passord *</b></label><br>
+						<input type="password" pattern=".{6,}" title="Seks eller flere tegn" name="pass" required><br>
+
+						<label id="remember">
+							<input type="checkbox" checked="checked" name="remember"> Husk meg
+							<span id="forgot"><a href="#">Glemt passord?</a></span>
+						</label>
+
+						<button type="submit" name="Login" id="LoggInn"><b>Logg inn</b></button><br>
+					</div>
+				</div>
+				<div class="SubLogin">
+					<h3>Har du ikke bruker?</h3>
+					<p>Det tar ikke lang tid å lage en,<br>
+						Og det er helt gratis!</p>
+
+					<button type="submit" formmethod="post" formnovalidate formaction="/Mosala/Pages/Register.php" formtarget="_parent" name="Register"><b>Registrer meg</b></button><br>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Script | Totally not copied -->
+	<script>
+		var modal = document.getElementById('id01');
+
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<!-- Innhold-->
+	<div class="Body">
+		<!-- Call to action buttons -->
+		<div id="CTA-buttons">
+			<a onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;" class="Button" id="Leftbtn">Jeg søker en ansatt</a>
+			<a onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;" class="Button" id="Rightbtn">Jeg søker arbeid</a>
+		</div>
+	</div>
+</body>
+<footer id="IndexFooter">
+	<table>
+		<tr>
+			<td id="LeftFooter">
+				<a href="/Mosala/Pages/How-it-works.php">Hvordan Mosala virker</a>
+			</td>
+
+			<td id="MiddleFooter">
+				<a href="/Mosala/Pages/About-us.php">Copyright <strong>&copy</strong> 2018 Mosala</a>
+			</td>
+
+			<td id="RightFooter">
+				<a target="_blank" href="http://www.instagram.com">Instagram</a> | <a target="_blank" href="http://www.facebook.com">Facebook</a> | <a target="_blank" href="http://www.twitter.com">Twitter</a>
+			</td>
+		</tr>
+	</table>
+</footer>
+
+</html>
