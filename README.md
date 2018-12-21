@@ -5,4 +5,4 @@ Har allerede gjort det meste som trengs i prosjektet frontend wise, tenkte jeg s
 Ikke noe spesielt å se her egentlig.
 
 
-<a href="http://klasserom.net/204/Elev20416/Eget%20arbeid/Mosala/">Gå til nettside</a>
+<a href="http://klasserom.net/204/Elev20416/Eget%20arbeid/Mosala/" target="_blank">Gå til nettside</a>
