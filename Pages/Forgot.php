@@ -77,16 +77,16 @@
       <h2>Glemt passord?</h2>
         <table>
           <tr>
-            <td>Vi kan sende mail til E-post adressen din:</td>
-            <td class="SendTo"><span title="Viser ikke nøyaktig antall *"><?php global $email; echo $email; ?></span></td>
+            <td>Vi kan sende mail til E-post adressen din: </td>
+            <td class="SendTo"><span title="Viser ikke nøyaktig antall *"> <?php global $email; echo $email; ?></span></td>
           </tr>
           <tr>
-            <td>Eller sende en SMS til:</td>
-            <td class="SendTo"><?php global $telefon; echo $telefon; ?></td>
+            <td>Eller sende en SMS til: </td>
+            <td class="SendTo"> <?php global $telefon; echo $telefon; ?></td>
           </tr>
           <tr class="GlemtBtn">
-            <td><button type="button" href="mailto:<?php global $email; echo $email; ?>" >E-mail</button></td>
-            <td class="RightButton"><button type="button" href="callto:<?php global $telefon; echo $telefon; ?>">Telefon</button></td>
+            <td><button tabindex="1" type="button" href="mailto:<?php global $email; echo $email; ?>" >E-mail</button></td>
+            <td class="RightButton"><button tabindex="2" type="button" href="callto:<?php global $telefon; echo $telefon; ?>">Telefon</button></td>
           </tr>
         </table>
         <span id="Nullstill">Så kan du lett tilbakestille passordet ditt</span>

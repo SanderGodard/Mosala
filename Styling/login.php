@@ -16,7 +16,7 @@
 
           <label id="remember">
             <input type="checkbox" checked="checked" name="remember"> Husk meg
-            <span id="forgot"><a href="#">Glemt passord?</a></span>
+            <span id="forgot"><a href="/Mosala/Pages/Forgot.php">Glemt passord?</a></span>
           </label>
 
           <button type="submit" name="Login" id="LoggInn" ><b>Logg inn</b></button><br>
