@@ -15,6 +15,41 @@ font-face {
   width: 100vw;
   height: 100vh; }
 
+.SendTo {
+  text-align: left !important;
+  color: #555;
+  margin-left: 4%; }
+
+.RightButton {
+  margin-left: 4%; }
+
+.GlemtDiv {
+  text-align: center;
+  width: 70%;
+  margin: auto; }
+
+.GlemtDiv h2 {
+  text-align: left;
+  color: #555;
+  font-weight: 400;
+  font-size: 1.8em; }
+
+.GlemtDiv table {
+  width: 100%; }
+
+.GlemtDiv table tr td {
+  text-align: right;
+  width: 48%;
+  display: inline-block; }
+
+#Nullstill {
+  color: #777;
+  font-size: 1.3em; }
+
+.GlemtBtn {
+  margin: 2vh 0 4vh;
+  display: block; }
+
 html {
   scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
@@ -732,7 +767,7 @@ button {
   width: 100%;
   box-sizing: border-box;
   padding: 12px 20px;
-  font-size: 1.3em; }
+  font-size: 1.16em; }
 
 button:hover {
   transition: all 0.1s ease;
