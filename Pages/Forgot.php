@@ -78,7 +78,7 @@
         <table>
           <tr>
             <td>Vi kan sende mail til E-post adressen din:</td>
-            <td class="SendTo"><?php global $email; echo $email; ?></td>
+            <td class="SendTo"><span title="Viser ikke nøyaktig antall *"><?php global $email; echo $email; ?></span></td>
           </tr>
           <tr>
             <td>Eller sende en SMS til:</td>
