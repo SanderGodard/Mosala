@@ -36,11 +36,37 @@
 	?>
 
   <?php
-    $email = 'sander@godard.no';
-    $telefon = '90189461';
 
-    //$email = $_REQUEST['email'];
+    //$getemail = $_REQUEST['email'];
+    $getemail = 'sander@godard.no';
+
+    $mailreplace = '*****';
+
+    $email0 = strstr($getemail, '@', true);
+    $email1 = substr( $email0 , 0, 1);
+    $email2 = $email1 . $mailreplace;
+    $email3 = strstr($getemail, '@');
+
+    $email = $email2 . $email3;
+
+                  //
+
     //$telefon = $_REQUEST['telefon'];
+    $gettelefon = '90189461';
+
+    $telefon0 = strlen($gettelefon) - 2;
+    $telefon1 = substr( $gettelefon , -2, 2);
+    $telefon2 = '';
+
+
+    $counter = 0;
+    while ($counter < $telefon0) {
+      $telefon2 = $telefon2 . '*';
+      $counter++;
+    }
+
+    $telefon = $telefon2 . $telefon1;
+
   ?>
 
 	<!-- Innhold-->
