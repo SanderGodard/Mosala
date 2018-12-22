@@ -48,14 +48,14 @@ font-face
 .SendTo
   text-align: left !important
   color: #555
-  margin-left: 4%
+  margin-left: 2%
 
 .RightButton
-  margin-left: 4%
+  margin-left: 2%
 
 .GlemtDiv
   text-align: center
-  width: 70%
+  width: 80%
   margin: auto
 
 .GlemtDiv h2
@@ -67,6 +67,9 @@ font-face
 .GlemtDiv table
   width: 100%
 
+.GlemtDiv table tr
+  width: 100%
+
 
 .GlemtDiv table tr td
   text-align: right
@@ -75,10 +78,10 @@ font-face
 
 #Nullstill
   color: #777
-  font-size: 1.3em
+  font-size: 1.1em
 
 .GlemtBtn
-  margin: 2vh 0 4vh
+  margin: 3vh 0 5vh
   display: block
 
 
@@ -1365,6 +1368,17 @@ button[name=Register]
     margin: auto
 
 @media #{$TabletL}
+
+  .GlemtDiv table tr td
+    width: 100% !important
+    display: block
+    margin: 0
+    text-align: center !important
+
+
+  .SendTo
+    text-align: center !important
+
   #Edit
     left: 82vw
     font-size: 100%
