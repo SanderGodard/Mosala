@@ -643,6 +643,7 @@ h1 td a {
   font-style: italic; }
 
 #Personalia {
+  max-width: 700px;
   width: 100%;
   border-collapse: collapse;
   border: 0px solid #777; }

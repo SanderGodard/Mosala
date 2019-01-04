@@ -5,7 +5,7 @@
 		</td>
 
 		<td id="MiddleFooter">
-			<a href="/Mosala/Pages/About-us.php">Copyright <strong>&copy</strong> 2018 Mosala</a>
+			<a href="/Mosala/Pages/About-us.php">Copyright <strong>&copy;</strong> 2018 - 2019 Mosala</a>
 		</td>
 
 		<td id="RightFooter">
